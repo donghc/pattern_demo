@@ -5,6 +5,7 @@ import "fmt"
 var _ API = (*hiAPI)(nil)
 var _ API = (*helloAPI)(nil)
 
+// API 简单工厂模式
 type API interface {
 	i() //防止API接口被其他的struct实现
 	Say(name string) string
